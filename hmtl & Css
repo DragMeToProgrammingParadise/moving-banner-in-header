@@ -1,0 +1,60 @@
+Moving Banner
+
+<div class="marquee">
+        <div class="marquee_group">
+          <p aria-hidden="true">Marisa Sale | Up to 50% off storewide</p>
+          <p aria-hidden="true">Marisa Sale | Up to 50% off storewide</p>
+          <p aria-hidden="true">Marisa Sale | Up to 50% off storewide</p>
+          <p aria-hidden="true">Marisa Sale | Up to 50% off storewide</p>
+          <p aria-hidden="true">Marisa Sale | Up to 50% off storewide</p>
+        </div>
+      
+        <div aria-hidden="true" class="marquee_group">
+          <p>Marisa Sale | Up to 50% off storewide</p>
+          <p>Marisa Sale | Up to 50% off storewide</p>
+          <p>Marisa Sale | Up to 50% off storewide</p>
+          <p>Marisa Sale | Up to 50% off storewide</p>
+          <p>Marisa Sale | Up to 50% off storewide</p>
+        </div>
+      </div>
+
+// CSS
+
+.marquee_group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%;
+  animation: scroll 25s linear infinite;
+	color: white;
+}
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - 2rem)) ;
+  }
+}
+.marquee_group p:not(.has-background):last-of-type {
+/*     padding-bottom: 0rem; */
+	 padding: 1rem;
+}
+.marquee_group p {
+    padding: 1rem;
+}
+body[data-scroll-step="0"] .et_pb_fullwidth_code_0_tb_header {
+	overflow: hidden;
+    transform: translateX(0px) !important;
+    transition: transform 200ms linear;
+}
+.et-l--header .et_pb_gutters3 .et_section_regular .et_pb_fullwidth_code{
+	padding: 0px 0px 0px 0px;
+}
+
